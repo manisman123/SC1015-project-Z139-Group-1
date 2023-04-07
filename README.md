@@ -24,7 +24,7 @@ We focused on attempting to identify the years of healthy life expectancy at bir
 ## Cleaning the dataset
 * Our dataset started off as an .xlsx file obtained from the WHS website quoted earlier. The dataset contained multiple annexes of data, which we manually processed by combining all of the data into one page.
 * Then, we addressed formatting issues directly through Excel such as removing extra rows at the top of the page to make the resulting CSV file easier to work with in the form of a Pandas database.
-* Missing values marked as "-" in the excel file were replaced with the mean using [SciKit Learn's SimpleImputer] as a means of maintaining our quantity of data without having to drop rows from the database.
+* Missing values marked as "-" in the excel file were replaced with the mean using [SciKit Learn's SimpleImputer]() as a means of maintaining our quantity of data without having to drop rows from the database.
 
 ## Exploratory data analysis
 Making use of a correlation heatmap, we were able to find data with the strongest correlation (<-0.7 or >0.7) with our target variable, years of healthy life expectancy at birth. The variables we found are as follows:
@@ -47,4 +47,5 @@ Since we are performing multiple regression models, we are relying on two differ
 
 By comparing these scores attained by performing regression with these five different models, we will then gauge the various accuracies of these different models by presenting all of their scores as follows.
 
-
+|Model|Training R^2|Training MSE|Test R^2|Test MSE|
+|---|---|---|---|---|
