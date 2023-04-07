@@ -57,4 +57,4 @@ All values are given to 5 decimal places.
 |Lasso Regression|0.92760|2.45887|0.93787|2.03050|
 |Ridge Regression|0.93367|2.45887|0.94035|2.03050|
 |Support Vector Regression|0.76365|2.45887|0.74665|2.03050|
-|Neural Network Regression|
+|Neural Network Regression|0.93367|2.45887|0.94034|2.02967|
