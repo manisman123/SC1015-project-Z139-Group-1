@@ -20,6 +20,7 @@ We focused on attempting to identify the years of healthy life expectancy at bir
 * [Lasso Regression]()
 * [Ridge Regression]()
 * [Support Vector Regression]()
+* [Neural Network Regression]()
 
 ## Cleaning the dataset
 * Our dataset started off as an .xlsx file obtained from the WHS website quoted earlier. The dataset contained multiple annexes of data, which we manually processed by combining all of the data into one page.
@@ -47,5 +48,13 @@ Since we are performing multiple regression models, we are relying on two differ
 
 By comparing these scores attained by performing regression with these five different models, we will then gauge the various accuracies of these different models by presenting all of their scores as follows.
 
+All values are given to 5 decimal places.
+
 |Model|Training R^2|Training MSE|Test R^2|Test MSE|
 |---|---|---|---|---|
+|Linear Regression|0.93367|2.45887|0.94032|2.03050|
+|Random Forest Regression|0.98764|2.45887|0.87346|2.03050|
+|Lasso Regression|0.92760|2.45887|0.93787|2.03050|
+|Ridge Regression|0.93367|2.45887|0.94035|2.03050|
+|Support Vector Regression|0.76365|2.45887|0.74665|2.03050|
+|Neural Network Regression|
