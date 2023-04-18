@@ -3,29 +3,29 @@
 SC1015 is an introductory module offered by NTU giving an insight to the field of Data Science and Artificial Intelligence, and basic skills in those domains. We have been assigned to identify a suitable dataset, and from there, use data scientific techniques to answer a problem statement.
 
 ## Dataset
-Our [dataset]() was sourced from WHS and contains the latest edition of data (as of 2023) of life expectancy data of different countries, with other corresponding data such as age-specific mortality, presence of diseases in countries, etc.
+Our [dataset](https://www.who.int/data/gho/publications/world-health-statistics) was sourced from WHS and contains the latest edition of data (as of 2023) of life expectancy data of different countries, with other corresponding data such as age-specific mortality, presence of diseases in countries, etc.
 
 ## Problem definition
 We focused on attempting to identify the years of healthy life expectancy at birth (of both sexes) of a country, based on corresponding data.
 
 ---
 ## Contributors
-* Zhang Mingkang (@...)
-* Garren Wee Qiming (@...)
-* Gaius de Souza (@...)
+* Zhang Mingkang
+* Garren Wee Qiming
+* Gaius de Souza
 ---
 # Models used 
-* [Linear Regression]()
-* [Random Forest Regression]()
-* [Lasso Regression]()
-* [Ridge Regression]()
-* [Support Vector Regression]()
-* [Neural Network Regression]()
+* [Linear Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/Linear%20Regression.ipynb)
+* [Random Forest Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/Random%20Forest%20Regression.ipynb)
+* [Lasso Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/Lasso%20Regression.ipynb)
+* [Ridge Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/Ridge%20regression.ipynb)
+* [Support Vector Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/SVR.ipynb)
+* [Neural Network Regression/Multi-layer Perceptron Regression](https://github.com/manisman123/SC1015-project-Z139-Group-1/blob/main/Regression/Multi-layer%20Perceptron%20regression.ipynb)
 
 ## Cleaning the dataset
 * Our dataset started off as an .xlsx file obtained from the WHS website quoted earlier. The dataset contained multiple annexes of data, which we manually processed by combining all of the data into one page.
 * Then, we addressed formatting issues directly through Excel such as removing extra rows at the top of the page to make the resulting CSV file easier to work with in the form of a Pandas database.
-* Missing values marked as "-" in the excel file were replaced with the mean using [SciKit Learn's SimpleImputer]() as a means of maintaining our quantity of data without having to drop rows from the database.
+* Missing values marked as "-" in the excel file were replaced with the mean using [SciKit Learn's SimpleImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html) as a means of maintaining our quantity of data without having to drop rows from the database.
 
 ## Exploratory data analysis
 Making use of a correlation heatmap, we were able to find data with the strongest correlation (<-0.7 or >0.7) with our target variable, years of healthy life expectancy at birth. The variables we found are as follows:
