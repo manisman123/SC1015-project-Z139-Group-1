@@ -53,24 +53,24 @@ All values are given to 5 decimal places.
 |Model|Training R^2|Training MSE|Test R^2|Test MSE|
 |---|---|---|---|---|
 |Linear Regression|0.93367|2.45887|0.94032|2.03050|
-|Random Forest Regression|0.98764|2.45887|0.87346|2.03050|
-|Lasso Regression|0.92760|2.45887|0.93787|2.03050|
-|Ridge Regression|0.93367|2.45887|0.94035|2.03050|
-|Support Vector Regression|0.76365|2.45887|0.74665|2.03050|
-|Neural Network Regression|0.93367|2.45887|0.94034|2.02967|
+|Random Forest Regression|0.98764|0.47668|0.86753|4.50751|
+|Lasso Regression|0.92760|2.68364|0.93787|2.11410|
+|Ridge Regression|0.93367|2.45890|0.94035|2.02971|
+|Support Vector Regression|0.76365|8.76129|0.74665|8.62036|
+|Neural Network Regression|0.93367|2.45887|0.94032|2.03070|
 
 ## General comments
-Comparing across different regression models, notable changes in R-squared scores between both training and test values have been observed. Possibly due to similar predictions made by the different models, the observed values for mean squared errors remain mostly unchanged throughout, with minor fluctuations observed in developing the model for neural network regression. Hence, R-squared values were referenced as our main benchmark for the performance of each model. 
+Comparing across different regression models, notable changes in both R-squared and mean squared error values were observed with respect to different choices of different regression models. Thus, we primarily evaluated each model based on these statistics. R-squared values range from a score of 0 to 1 in terms of measuring accuracy, and mean square error values depend on magnitude with respect to the data set that we are utilizing for this test.
 
 ## Linear regression
-Linear regression functions via determining the equation of a best fit straight line through values from our chosen variables. We started off experimenting with a simple linear regression model, which factored in all of the correlated variables with respect to our target, using scikit-learn's LinearRegression function. The result was a linear model with the following equation:
+Linear regression functions via determining the equation of a best fit straight line through values from our chosen variables. We started off experimenting with a simple linear regression model, which factored in all of the correlated variables with respect to our target, using scikit-learn's LinearRegression function. 
 
-In terms of R-squared score, This method resulted in a high performance of 0.94032. - second only to Ridge regression, which beat the former only marginally. It is hypothesized that, due to the high correlation nature of the data that we have chosen to make this model, this has resulted in a high degree of accuracy among the selected models.
+Starting off with this model led us to a good baseline for which we could compare other models against its perfromance. Linear regression was successful in which it achieved a very good fit, with a low mean squared error. 
 
 ## Random forest
 Random forest is a variation of ensemble learning, which combines the predictions of multiple models to generate one with higher accuracy. Using individual decision trees as regression models results in a high volatility and low reliability, especially when attempting to translate the functionality of the model across different datasets. In the context of random forest, multiple decision trees ensure potection from individual errors that may arise. Generally for random forest regression, results from multiple models are aggregated, and a final optimal result is presented.
 
-In our context, random forest resulted in the highest R-squared value Of 0.98764, with respect to the training dataset. However, when the model was applied to a test data set instead, this resulted in one of the lowest R-squared scores among the models that we have selected overall, of 0.87346. Given that a test R-squared score is more valid than a training R-squared score in evaluating the accuracy of our regression models, these observations compromise the perceived accuracy of our model.
+In our context, our model is able to generate relatively acceptable results without hyper-parameter tuning. However, it did suffer from overfitting due to not enough trees that we provided in the model, as noted by a higher R-squared value achieved in training data compared to test data, as well as a dramatic increase in MSE under similar comparisons. For reasons with respect to efficiency, it was not practical to generate more trees, but instead, to look to other solutions in other algorithms that we had lined up as competitors to this choice.
 
 ## Lasso regression
 In this notebook, we used the same variables as the other models but fitted it into a Lasso Regression model in hopes that the lasso regression would minimise the prediction error for our response variables by imposing a constraint on the model parameters that causes regression coefficients for some variables to shrink toward zero. However, this did not improve the results from the linear regression model as seen by the lower R^2 value.
