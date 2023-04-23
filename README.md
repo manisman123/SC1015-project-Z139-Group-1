@@ -6,7 +6,7 @@ SC1015 is an introductory module offered by NTU giving an insight to the field o
 Our [dataset](https://www.who.int/data/gho/publications/world-health-statistics) was sourced from WHS and contains the latest edition of data (as of 2023) of life expectancy data of different countries, with other corresponding data such as age-specific mortality, presence of diseases in countries, etc.
 
 ## Problem definition
-We focused on attempting to identify the years of healthy life expectancy at birth (of both sexes) of a country, based on corresponding data.
+We focused on attempting to identify the years of healthy life expectancy at birth (of both sexes) of a country, based on corresponding data in predictor variables.
 
 ---
 ## Contributors
